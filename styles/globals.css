@@ -2,26 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer components {
+    .link {
+        @apply text-accent-400 transition-all duration-100 [&:not(:disabled)]:hover:opacity-50 disabled:opacity-25 disabled:cursor-not-allowed;
+    }
+
+    .container {
+        @apply px-20 !max-w-[75rem] mx-auto;
+    }
+
+    .abs-container {
+        @apply !max-w-[calc(77rem-10rem)] mx-auto;
+    }
+
+    .text-unfill {
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        -ms-text-fill-color: transparent;
+    }
+
+    .text-fill {
+        -webkit-text-fill-color: initial;
+        -moz-text-fill-color: initial;
+        -ms-text-fill-color: initial;
+    }
+
+    .header-title {
+        @apply type-head-1 font-black;
+    }
+
+    .header-text {
+        @apply type-body-lg;
+    }
+
+    .section-heading {
+        @apply type-head-2 font-black;
+    }
+
+    .section-subheading {
+        @apply type-body-lg;
+    }
+
+    .reverse-container {
+        @apply max-w-[100rem] mx-auto;
+    }
+
+    .brand {
+        @apply font-bold;
+    }
+
+    .skeleton {
+        @apply animate-skeleton;
+    }
+
+    main {
+        @apply min-h-screen overflow-hidden;
+    }
+
+    .btn {
+        @apply select-none transition-all duration-200 px-4 py-2 rounded-sm;
+    }
+
+    .type-head-5 {
+        @apply text-xl phone:text-lg;
+    }
+
+    .type-head-4 {
+        @apply text-2xl phone:text-xl;
+    }
+
+    .type-head-3 {
+        @apply text-3xl phone:text-2xl;
+    }
+
+    .type-head-2 {
+        @apply text-4xl phone:text-3xl;
+    }
+
+    .type-head-1 {
+        @apply text-5xl phone:text-4xl;
+    }
+
+    .type-body-base {
+        @apply text-base phone:text-sm;
+    }
+    .type-body-sm {
+        @apply text-sm phone:text-xs;
+    }
+    .type-body-lg {
+        @apply text-lg phone:text-base;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+} */
+
+.slide:not(.no-slide) {
+    opacity: 0;
+    transition: all 0.3s ease, transform 1s ease, opacity 1s ease;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+*:has(> .container) {
+    @apply w-full;
+}
+
+.slide.slide-left {
+    transform: translateX(4rem);
+}
+.slide.slide-right {
+    transform: translateX(-4rem);
+}
+.slide.slide-up {
+    transform: translateY(4rem);
+}
+.slide.slide-down {
+    transform: translateY(-4rem);
+}
+
+.slide.i\:open {
+    opacity: 1;
+    transform: translate(0, 0);
 }
