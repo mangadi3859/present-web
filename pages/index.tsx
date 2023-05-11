@@ -12,10 +12,16 @@ export default function Home() {
                 <Image src={GambarTI} alt="" className="slide slide-up" />
 
                 <h2 className="type-head-5 font-semibold slide slide-up">Dipersembahkan oleh:</h2>
-                <div className="flex-col flex gap-2 mt-2 slide slide-right">
-                    <p>Nama: Komang Adi Wirawan</p>
-                    <p>NIS: 5856</p>
-                    <p>Kelas: XI RPL 3</p>
+                <div className="grid slide slide-up grid-cols-[max-content,max-content,1fr] type-body-lg gap-2 items-center">
+                    <span className="font-bold">Nama</span>
+                    <span className="font-bold">:</span>
+                    <p>Komang Adi Wirawan</p>
+                    <span className="font-bold">NIS</span>
+                    <span className="font-bold">:</span>
+                    <p>5856</p>
+                    <span className="font-bold">Kelas</span>
+                    <span className="font-bold">:</span>
+                    <p>XI RPL 3</p>
                 </div>
             </div>
         </Page>
