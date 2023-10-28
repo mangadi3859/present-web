@@ -3,7 +3,7 @@ import Page from "@/components/Page";
 import Link from "next/link";
 import { FaLink } from "react-icons/fa";
 
-import Taksu from "@/public/assets/taksu-front.png";
+import Taksu from "@/public/assets/taksu-front-view.png";
 import TaksuLogo from "@/public/assets/taksu-logo.svg";
 
 export default function InfoUmum() {
