@@ -10,6 +10,9 @@ import Gallery2 from "@/public/assets/gallery-2.jpg";
 import Gallery3 from "@/public/assets/gallery-3.jpg";
 import Gallery4 from "@/public/assets/gallery-4.jpg";
 import Gallery5 from "@/public/assets/gallery-5.jpg";
+import Gallery6 from "@/public/assets/gallery-6.jpg";
+import Gallery7 from "@/public/assets/gallery-7.jpg";
+import Gallery8 from "@/public/assets/gallery-8.jpg";
 
 export default function DalamTaksu() {
     return (
@@ -47,6 +50,15 @@ export default function DalamTaksu() {
                     </SwiperSlide>
                     <SwiperSlide>
                         <SwiperCard src={Gallery5} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <SwiperCard src={Gallery6} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <SwiperCard src={Gallery7} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <SwiperCard src={Gallery8} />
                     </SwiperSlide>
                 </Swiper>
             </div>
